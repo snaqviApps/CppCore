@@ -6,6 +6,7 @@
 //
 
 #include <iostream>
+#include "Cookie.cpp"
 
 using namespace std;
 
@@ -30,6 +31,16 @@ int main(int argc, const char * argv[]) {
     
     cout <<"num3 address: " << num3 << ", nme3 content: " << *num3 << endl;
     cout <<"num4 address: " << num4 << ", nme4 content: " << *num4 << endl; // with pointers,'num4' is same
+    
+    
+    // Using Cookie instance
+    Cookie* cookieOne = new Cookie("Yellow");
+    Cookie* cookieTwo = new Cookie("Green");
+    cout << "\nCookie1: " << cookieOne-> getColor() << endl;
+    cout << "Cookie2: " << cookieTwo-> getColor() << endl;
+    cookieOne-> setColor("blue");
+    cout << "Cookie1 sets new color: " << cookieOne->getColor() << endl;
+    
     
     return 0;
 }
