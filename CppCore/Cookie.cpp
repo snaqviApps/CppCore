@@ -9,19 +9,15 @@
 
 using namespace std;
 
-class Cookie {
-private:
-    string color;
-    
-public:
-    Cookie(string color) {
-        this->color = color;
-    }
-    string getColor() {
-        return color;
-    }
-    void setColor(string color) {
+Cookie::Cookie(string color) {
         this->color = color;
     }
 
-};
+    string Cookie::getColor() {
+        return color;
+    }
+
+    void Cookie::setColor(string color) {
+        this->color = color;
+        
+    }
