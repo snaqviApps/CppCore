@@ -33,16 +33,45 @@ int main(int argc, const char * argv[]) {
     
     // LinkedList at work
     UseLinkedLists* linkListOne = new UseLinkedLists(5);
-    
-    //list-data:
-    cout<<"------------"<<endl;
-    cout<<"LinkedList Example: "<<endl;
+    cout<<"-----------------------"<<endl;
+    cout<<"-----------------------"<<endl;
+    cout<<"LinkedList Example:\n\n";
     linkListOne->getHead();
     linkListOne-> getTail();
-    linkListOne->geTotalMembers();
-    
     linkListOne->printList();
     
+    // add list memeber
+    linkListOne->append(20);
+    linkListOne->getTotalMembers();
+    cout <<"member added with value: " << linkListOne->tail->value << endl;
+    linkListOne->printList();
+    
+    // delete last-list memeber with 03 possible scenario
+    linkListOne->append(50);
+    cout <<"before deleting last node (member) of the list\n";
+    linkListOne->getTotalMembers();
+    linkListOne->printList();
+    
+    // scenario: 1
+    linkListOne->deleteLast();
+    cout <<"\nLL after firt call to deleteLast(): \n";
+    linkListOne->printList();
+    
+    // scenario: 2
+    linkListOne->deleteLast();
+    cout <<"\nLL after 2nd call to deleteLast(): \n";
+    linkListOne->printList();
+    
+    // scenario: 3
+    linkListOne->deleteLast();
+    cout <<"\nLL after 3rd call to deleteLast(): \n";
+    linkListOne->printList();
+    
+    // using now prepend()
+    cout << "Using prepend() call: " << endl;
+    linkListOne->append(3);
+    linkListOne->prepend(5);        // adding at the 'head' or beginning of the list
+    linkListOne->printList();
     
     
     return 0;

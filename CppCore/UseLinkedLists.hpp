@@ -24,20 +24,22 @@ public:
 class UseLinkedLists {
 private:
     Node* head;
-    Node* tail;
     int length;
     
-public:
     
+public:
+    Node* tail;
     UseLinkedLists(int value);     // constructor
+    ~UseLinkedLists();     // constructor
     
     void append(int value);
     void prepend(int value);
+    void deleteLast();
     bool insert(int index, int value);
     void printList();
     void getHead();
     void getTail();
-    void geTotalMembers();
+    void getTotalMembers();
 };
 
 #endif /* UseLinkedLists_hpp */
